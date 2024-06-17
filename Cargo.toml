@@ -1,0 +1,12 @@
+[package]
+name = "cmake_tiny_tools"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "cmake_tiny_tools"
+path = "src/bin/main.rs"
+
+[dependencies]
+tokio = { version = "1.38", features = ["full"] }
+reqwest = "0.12"
