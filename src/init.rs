@@ -10,7 +10,7 @@ CMakeUserPresets.json";
 
 fn get_cmake_lists_lib_main_content(project_name: &str) -> String {
     let capitalized_project_name = project_name.to_uppercase();
-    return format!(r#"cmake_minimum_required(VERSION 3.22.1)
+    return format!(r#"cmake_minimum_required(VERSION 3.28)
 project({project_name} VERSION 0.1)
 
 include(cmake/CPM.cmake)
@@ -173,8 +173,8 @@ fn get_cpm_content() -> &'static str {
 #
 # SPDX-FileCopyrightText: Copyright (c) 2019-2023 Lars Melchior and contributors
 
-set(CPM_DOWNLOAD_VERSION 0.40.0)
-set(CPM_HASH_SUM "7b354f3a5976c4626c876850c93944e52c83ec59a159ae5de5be7983f0e17a2a")
+set(CPM_DOWNLOAD_VERSION 0.42.0)
+set(CPM_HASH_SUM "2020b4fc42dba44817983e06342e682ecfc3d2f484a581f11cc5731fbe4dce8a")
 
 if(CPM_SOURCE_CACHE)
   set(CPM_DOWNLOAD_LOCATION "${CPM_SOURCE_CACHE}/cpm/CPM_${CPM_DOWNLOAD_VERSION}.cmake")
@@ -210,7 +210,7 @@ fn get_lib_content() -> &'static str {
     const LIB_CPP: &str = "
 namespace NHidden {
 
-void Hidden() {}
+void hidden() {}
 
 }
 ";
